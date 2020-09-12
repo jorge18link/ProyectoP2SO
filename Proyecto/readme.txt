@@ -7,18 +7,19 @@ Existen espacios de memoria que estan por defecto para el funcionamiento de moni
 
 El archivo de configuracion tiene que tener la siguiente estructura:
 
-1,3,500,2601,1000000
-2,3,500,2611,1000000
-3,7,500,2621,1000000
-4,10,500,2631,1000000
-5,5,500,2641,1000000
+1,3,500,2601,5,1000000
+2,3,500,2611,10,1000000
+3,7,500,2621,15,1000000
+4,10,500,2631,8,1000000
+5,5,500,2641,4,1000000
 
 Donde las comas separan columnas y cada columna representa lo siguiente:
 1: El id del sensor
 2: El tipo del sensor
 3: El umbral
 4: El espacio de memoria donde se genera la data (Importante: por cada registro tienen que estar de 10 en 10 y no se tiene que dejar espacios en blanco ni lineas vacias)
-5: Este dato representa el intervalo de tiempo en millis en que se genera data en el espacio de memoria de la columna anterior
+5: Esta columna ya no se usa, era para que cada sensor tenga su propio tiempo de monitoreo, ahora se usa el deltaT ingresado
+6: Este dato representa el intervalo de tiempo en millis en que se genera data en el espacio de memoria de la columna anterior
 
 
 Pasos para ejecutar monitor.c:
